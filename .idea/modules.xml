@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ruoyi-common/ruoyi-common.iml" filepath="$PROJECT_DIR$/ruoyi-common/ruoyi-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-master.iml" filepath="$PROJECT_DIR$/springboot-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot-sample/springboot-sample.iml" filepath="$PROJECT_DIR$/springboot-sample/springboot-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../springboot-swagger/swagger_demo.iml" filepath="$PROJECT_DIR$/../springboot-swagger/swagger_demo.iml" />
+    </modules>
+  </component>
+</project>
