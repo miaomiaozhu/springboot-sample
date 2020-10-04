@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.sample.role.mapper.RoleMapper">
+    
+    <resultMap type="com.example.sample.role.domain.Role" id="RoleResult">
+        <result property="roleId"    column="role_id"    />
+        <result property="roleName"    column="role_name"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+    </resultMap>
+
+    <sql id="selectRoleVo">
+        select
+        t.role_id,
+        t.role_name,
+        t.create_by,
+        t.create_time,
+        t.update_by,
+        t.update_time        from test_role t
+    </sql>
+    <!--查询角色列表-->
+    <select id="selectRoleList" parameterType="com.example.sample.role.domain.Role" resultMap="RoleResult">
+        <include refid="selectRoleVo"/>
+        <where>  
+            <if test="roleName != null  and roleName != ''"> and t.role_name like concat(concat('%', #{roleName}), '%')</if>
+        </where>
+    </select>
+    <!--查询角色详情-->
+    <select id="selectRoleById" parameterType="String" resultMap="RoleResult">
+        <include refid="selectRoleVo"/>
+        where t.role_id = #{roleId}
+    </select>
+    <!--新增角色-->
+    <insert id="insertRole" parameterType="com.example.sample.role.domain.Role">
+        <selectKey keyProperty="roleId" resultType="String" order="BEFORE">
+            SELECT seq_role.NEXTVAL as roleId FROM DUAL
+        </selectKey>
+        insert into test_role
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="roleId != null">role_id,</if>
+            <if test="roleName != null and roleName != ''">role_name,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="roleId != null">#{roleId},</if>
+            <if test="roleName != null and roleName != ''">#{roleName},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+         </trim>
+    </insert>
+    <!--更新角色-->
+    <update id="updateRole" parameterType="com.example.sample.role.domain.Role">
+        update test_role
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="roleName != null and roleName != ''">role_name = #{roleName},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+        </trim>
+        where role_id = #{roleId}
+    </update>
+    <!--单个删除角色-->
+    <delete id="deleteRoleById" parameterType="String">
+        delete from test_role where role_id = #{roleId}
+    </delete>
+    <!--批量删除角色-->
+    <delete id="deleteRoleByIds" parameterType="String">
+        delete from test_role where role_id in 
+        <foreach item="roleId" collection="array" open="(" separator="," close=")">
+            #{roleId}
+        </foreach>
+    </delete>
+    <!--批量添加角色-->
+    <insert id="batchInsertRole" useGeneratedKeys="false">
+        INSERT INTO test_role(
+            role_id,
+            role_name,
+            create_by,
+            create_time,
+            update_by,
+            update_time        )
+        select  seq_role.NEXTVAL,cd.* from(
+        <foreach collection="list" item="item" index="index" separator="union all">
+            SELECT
+            #{item.roleId ,jdbcType=$column.jdbcType},
+            #{item.roleName ,jdbcType=$column.jdbcType},
+            #{item.createBy ,jdbcType=$column.jdbcType},
+            #{item.createTime ,jdbcType=$column.jdbcType},
+            #{item.updateBy ,jdbcType=$column.jdbcType},
+            #{item.updateTime ,jdbcType=$column.jdbcType}            FROM DUAL
+        </foreach>
+        )cd
+    </insert>
+</mapper>
