@@ -59,7 +59,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
          </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
             <if test="userId != null">#{userId},</if>
-            <if test="userName != null">#{user_name},</if>
+            <if test="userName != null">#{userName},</if>
             <if test="age != null">#{age},</if>
             <if test="birthDate != null">#{birthDate},</if>
             <if test="nativePlace != null">#{nativePlace},</if>

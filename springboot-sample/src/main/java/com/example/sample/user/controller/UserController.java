@@ -148,7 +148,7 @@ public class UserController extends BaseController
     @GetMapping("/userExport")
     @ResponseBody
     @ApiOperation(value="导出用戶列表",notes = "导出用戶列表")
-    public String userExport(HttpServletResponse response,User user) throws Exception { //throws IOException {
+    public void userExport(HttpServletResponse response,User user) throws Exception { //throws IOException {
         ExcelWriter writer = null;
         OutputStream outputStream = response.getOutputStream();
         try {
@@ -180,6 +180,5 @@ public class UserController extends BaseController
                 e.printStackTrace();
             }
         }
-        return null;
     }
 }
