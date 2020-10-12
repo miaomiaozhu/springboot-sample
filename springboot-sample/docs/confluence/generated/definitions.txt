@@ -1,0 +1,141 @@
+
+h2. 定义 {anchor:definitions}
+
+h3. CellStyle {anchor:cellstyle}
+
+||名称||说明||类型||
+|*alignment*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (GENERAL, LEFT, CENTER, RIGHT, FILL, JUSTIFY, CENTER_SELECTION, DISTRIBUTED)|
+|*alignmentEnum*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (GENERAL, LEFT, CENTER, RIGHT, FILL, JUSTIFY, CENTER_SELECTION, DISTRIBUTED)|
+|*borderBottom*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (NONE, THIN, MEDIUM, DASHED, DOTTED, THICK, DOUBLE, HAIR, MEDIUM_DASHED, DASH_DOT, MEDIUM_DASH_DOT, DASH_DOT_DOT, MEDIUM_DASH_DOT_DOT, SLANTED_DASH_DOT)|
+|*borderBottomEnum*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (NONE, THIN, MEDIUM, DASHED, DOTTED, THICK, DOUBLE, HAIR, MEDIUM_DASHED, DASH_DOT, MEDIUM_DASH_DOT, DASH_DOT_DOT, MEDIUM_DASH_DOT_DOT, SLANTED_DASH_DOT)|
+|*borderLeft*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (NONE, THIN, MEDIUM, DASHED, DOTTED, THICK, DOUBLE, HAIR, MEDIUM_DASHED, DASH_DOT, MEDIUM_DASH_DOT, DASH_DOT_DOT, MEDIUM_DASH_DOT_DOT, SLANTED_DASH_DOT)|
+|*borderLeftEnum*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (NONE, THIN, MEDIUM, DASHED, DOTTED, THICK, DOUBLE, HAIR, MEDIUM_DASHED, DASH_DOT, MEDIUM_DASH_DOT, DASH_DOT_DOT, MEDIUM_DASH_DOT_DOT, SLANTED_DASH_DOT)|
+|*borderRight*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (NONE, THIN, MEDIUM, DASHED, DOTTED, THICK, DOUBLE, HAIR, MEDIUM_DASHED, DASH_DOT, MEDIUM_DASH_DOT, DASH_DOT_DOT, MEDIUM_DASH_DOT_DOT, SLANTED_DASH_DOT)|
+|*borderRightEnum*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (NONE, THIN, MEDIUM, DASHED, DOTTED, THICK, DOUBLE, HAIR, MEDIUM_DASHED, DASH_DOT, MEDIUM_DASH_DOT, DASH_DOT_DOT, MEDIUM_DASH_DOT_DOT, SLANTED_DASH_DOT)|
+|*borderTop*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (NONE, THIN, MEDIUM, DASHED, DOTTED, THICK, DOUBLE, HAIR, MEDIUM_DASHED, DASH_DOT, MEDIUM_DASH_DOT, DASH_DOT_DOT, MEDIUM_DASH_DOT_DOT, SLANTED_DASH_DOT)|
+|*borderTopEnum*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (NONE, THIN, MEDIUM, DASHED, DOTTED, THICK, DOUBLE, HAIR, MEDIUM_DASHED, DASH_DOT, MEDIUM_DASH_DOT, DASH_DOT_DOT, MEDIUM_DASH_DOT_DOT, SLANTED_DASH_DOT)|
+|*bottomBorderColor*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*dataFormat*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*dataFormatString*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*fillBackgroundColor*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*fillBackgroundColorColor*\\ \\ _可选_||*样例* : {noformat}"[#color]"{noformat}||[Color|#color]|
+|*fillForegroundColor*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*fillForegroundColorColor*\\ \\ _可选_||*样例* : {noformat}"[#color]"{noformat}||[Color|#color]|
+|*fillPattern*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (NO_FILL, SOLID_FOREGROUND, FINE_DOTS, ALT_BARS, SPARSE_DOTS, THICK_HORZ_BANDS, THICK_VERT_BANDS, THICK_BACKWARD_DIAG, THICK_FORWARD_DIAG, BIG_SPOTS, BRICKS, THIN_HORZ_BANDS, THIN_VERT_BANDS, THIN_BACKWARD_DIAG, THIN_FORWARD_DIAG, SQUARES, DIAMONDS, LESS_DOTS, LEAST_DOTS)|
+|*fillPatternEnum*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (NO_FILL, SOLID_FOREGROUND, FINE_DOTS, ALT_BARS, SPARSE_DOTS, THICK_HORZ_BANDS, THICK_VERT_BANDS, THICK_BACKWARD_DIAG, THICK_FORWARD_DIAG, BIG_SPOTS, BRICKS, THIN_HORZ_BANDS, THIN_VERT_BANDS, THIN_BACKWARD_DIAG, THIN_FORWARD_DIAG, SQUARES, DIAMONDS, LESS_DOTS, LEAST_DOTS)|
+|*font*\\ \\ _可选_||*样例* : {noformat}"[#font]"{noformat}||[Font|#font]|
+|*fontIndex*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*hidden*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*indention*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*index*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*leftBorderColor*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*locked*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*quotePrefixed*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*rightBorderColor*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*rotation*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*shrinkToFit*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*topBorderColor*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*verticalAlignment*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (TOP, CENTER, BOTTOM, JUSTIFY, DISTRIBUTED)|
+|*verticalAlignmentEnum*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||enum (TOP, CENTER, BOTTOM, JUSTIFY, DISTRIBUTED)|
+|*wrapText*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+
+
+h3. Color {anchor:color}
+_类型_ : object
+
+
+h3. Font {anchor:font}
+
+||名称||说明||类型||
+|*bold*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*color*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*fontHeight*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*fontHeightInPoints*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*fontName*\\ \\ _可选_||*样例* : {noformat}"string"{noformat}||string|
+|*index*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*italic*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*strikeout*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*typeOffset*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*underline*\\ \\ _可选_||*最小值* : {noformat}-128{noformat}\\ \\ *最大值* : {noformat}127{noformat}\\ \\ *样例* : {noformat}0{noformat}||integer (int32)|
+
+
+h3. PageInfo«Role» {anchor:d5eb5331f41efec686d2d1c190c2d225}
+
+||名称||说明||类型||
+|*endRow*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*firstPage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*hasNextPage*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*hasPreviousPage*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*isFirstPage*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*isLastPage*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*lastPage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*list*\\ \\ _可选_||*样例* : {noformat}[ "[#role]" ]{noformat}||< [Role|#role] > array|
+|*navigateFirstPage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*navigateLastPage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*navigatePages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*navigatepageNums*\\ \\ _可选_||*样例* : {noformat}[ 0 ]{noformat}||< integer (int32) > array|
+|*nextPage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pageNum*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*prePage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*size*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*startRow*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*total*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int64)|
+
+
+h3. PageInfo«User» {anchor:4994708ea1e995db67c5e36e9a5fb662}
+
+||名称||说明||类型||
+|*endRow*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*firstPage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*hasNextPage*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*hasPreviousPage*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*isFirstPage*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*isLastPage*\\ \\ _可选_||*样例* : {noformat}true{noformat}||boolean|
+|*lastPage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*list*\\ \\ _可选_||*样例* : {noformat}[ "[#user]" ]{noformat}||< [User|#user] > array|
+|*navigateFirstPage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*navigateLastPage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*navigatePages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*navigatepageNums*\\ \\ _可选_||*样例* : {noformat}[ 0 ]{noformat}||< integer (int32) > array|
+|*nextPage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pageNum*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pageSize*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*pages*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*prePage*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*size*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*startRow*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int32)|
+|*total*\\ \\ _可选_||*样例* : {noformat}0{noformat}||integer (int64)|
+
+
+h3. Role {anchor:role}
+
+||名称||说明||类型||
+|*cellStyleMap*\\ \\ _可选_||*样例* : {noformat}{\\   "string" : "[#cellstyle]"\\ }{noformat}||< string, [CellStyle|#cellstyle] > map|
+|*createBy*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||创建时间\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*roleId*\\ \\ _可选_||角色ID\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*roleName*\\ \\ _可选_||角色名称\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateBy*\\ \\ _可选_||更新人\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||更新时间\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+
+
+h3. User {anchor:user}
+
+||名称||说明||类型||
+|*age*\\ \\ _可选_||年龄\\ \\ *样例* : {noformat}0{noformat}||integer (int64)|
+|*birthDate*\\ \\ _可选_||出生日期\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*cellStyleMap*\\ \\ _可选_||*样例* : {noformat}{\\   "string" : "[#cellstyle]"\\ }{noformat}||< string, [CellStyle|#cellstyle] > map|
+|*createBy*\\ \\ _可选_||创建人\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*createTime*\\ \\ _可选_||创建时间\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*idNumber*\\ \\ _可选_||身份证号\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*nativePlace*\\ \\ _可选_||籍贯\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*remark*\\ \\ _可选_||备注\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateBy*\\ \\ _可选_||更新人\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*updateTime*\\ \\ _可选_||更新时间\\ \\ *样例* : {noformat}"string"{noformat}||string (date-time)|
+|*userId*\\ \\ _可选_||主键\\ \\ *样例* : {noformat}"string"{noformat}||string|
+|*userName*\\ \\ _可选_||姓名\\ \\ *样例* : {noformat}"string"{noformat}||string|
+
+
+

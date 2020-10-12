@@ -1,0 +1,934 @@
+
+h2. 资源 {anchor:paths}
+
+h3. Role-controller {anchor:role-controller_resource}
+角色controller
+
+
+h4. 新增角色 {anchor:addsaveusingpost}
+{noformat}
+POST /sample/role/add
+{noformat}
+
+
+h5. 说明
+新增角色
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Body*|*role*\\ \\ _必填_||role||[Role|#role]|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/sample/role/add
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "cellStyleMap" : {
+    "string" : "[#cellstyle]"
+  },
+  "createBy" : "string",
+  "createTime" : "string",
+  "roleId" : "string",
+  "roleName" : "string",
+  "updateBy" : "string",
+  "updateTime" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 查询角色详情 {anchor:roledetailusingget}
+{noformat}
+GET /sample/role/detail
+{noformat}
+
+
+h5. 说明
+查询角色详情
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Query*|*id*\\ \\ _可选_||id||string|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/sample/role/detail
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 修改角色 {anchor:editsaveusingpost}
+{noformat}
+POST /sample/role/edit
+{noformat}
+
+
+h5. 说明
+修改角色
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Body*|*role*\\ \\ _必填_||role||[Role|#role]|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/sample/role/edit
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "cellStyleMap" : {
+    "string" : "[#cellstyle]"
+  },
+  "createBy" : "string",
+  "createTime" : "string",
+  "roleId" : "string",
+  "roleName" : "string",
+  "updateBy" : "string",
+  "updateTime" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 导出角色列表 {anchor:exportusingget}
+{noformat}
+GET /sample/role/export
+{noformat}
+
+
+h5. 说明
+导出角色列表
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Query*|*createBy*\\ \\ _可选_||创建人||string|
+|*Query*|*createTime*\\ \\ _可选_||创建时间||string (date-time)|
+|*Query*|*roleId*\\ \\ _可选_||角色ID||string|
+|*Query*|*roleName*\\ \\ _可选_||角色名称||string|
+|*Query*|*updateBy*\\ \\ _可选_||更新人||string|
+|*Query*|*updateTime*\\ \\ _可选_||更新时间||string (date-time)|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/sample/role/export
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 导入角色列表 {anchor:importroleusingpost}
+{noformat}
+POST /sample/role/importRole
+{noformat}
+
+
+h5. 说明
+导入角色列表
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*FormData*|*file*\\ \\ _必填_||file||file|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/sample/role/importRole
+{code}
+
+
+h6. 请求 formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 查询角色列表 {anchor:listusingget}
+{noformat}
+GET /sample/role/list
+{noformat}
+
+
+h5. 说明
+查询角色列表
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Query*|*createBy*\\ \\ _可选_||创建人||string|| |
+|*Query*|*createTime*\\ \\ _可选_||创建时间||string (date-time)|| |
+|*Query*|*pageNum*\\ \\ _可选_||当前页||integer (int32)||{noformat}1{noformat}|
+|*Query*|*pageSize*\\ \\ _可选_||每页条数||integer (int32)||{noformat}10{noformat}|
+|*Query*|*roleId*\\ \\ _可选_||角色ID||string|| |
+|*Query*|*roleName*\\ \\ _可选_||角色名称||string|| |
+|*Query*|*updateBy*\\ \\ _可选_||更新人||string|| |
+|*Query*|*updateTime*\\ \\ _可选_||更新时间||string (date-time)|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[PageInfo«Role»|#d5eb5331f41efec686d2d1c190c2d225]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/sample/role/list
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "endRow" : 0,
+  "firstPage" : 0,
+  "hasNextPage" : true,
+  "hasPreviousPage" : true,
+  "isFirstPage" : true,
+  "isLastPage" : true,
+  "lastPage" : 0,
+  "list" : [ {
+    "cellStyleMap" : {
+      "string" : "[#cellstyle]"
+    },
+    "createBy" : "string",
+    "createTime" : "string",
+    "roleId" : "string",
+    "roleName" : "string",
+    "updateBy" : "string",
+    "updateTime" : "string"
+  } ],
+  "navigateFirstPage" : 0,
+  "navigateLastPage" : 0,
+  "navigatePages" : 0,
+  "navigatepageNums" : [ 0 ],
+  "nextPage" : 0,
+  "pageNum" : 0,
+  "pageSize" : 0,
+  "pages" : 0,
+  "prePage" : 0,
+  "size" : 0,
+  "startRow" : 0,
+  "total" : 0
+}
+{code}
+
+
+h4. 删除角色 {anchor:removeusingpost}
+{noformat}
+POST /sample/role/remove
+{noformat}
+
+
+h5. 说明
+删除角色
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Query*|*ids*\\ \\ _可选_||角色ID||string|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/sample/role/remove
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 导出角色列表 {anchor:roleexportusingget}
+{noformat}
+GET /sample/role/roleExport
+{noformat}
+
+
+h5. 说明
+导出角色列表
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Query*|*createBy*\\ \\ _可选_||创建人||string|
+|*Query*|*createTime*\\ \\ _可选_||创建时间||string (date-time)|
+|*Query*|*roleId*\\ \\ _可选_||角色ID||string|
+|*Query*|*roleName*\\ \\ _可选_||角色名称||string|
+|*Query*|*updateBy*\\ \\ _可选_||更新人||string|
+|*Query*|*updateTime*\\ \\ _可选_||更新时间||string (date-time)|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||string|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/sample/role/roleExport
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"string"
+{code}
+
+
+h3. User-controller {anchor:user-controller_resource}
+用户controller
+
+
+h4. 新增保存用戶 {anchor:adduserusingpost}
+{noformat}
+POST /user/add
+{noformat}
+
+
+h5. 说明
+导出用戶列表
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Body*|*user*\\ \\ _必填_||user||[User|#user]|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/user/add
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "age" : 0,
+  "birthDate" : "string",
+  "cellStyleMap" : {
+    "string" : "[#cellstyle]"
+  },
+  "createBy" : "string",
+  "createTime" : "string",
+  "idNumber" : "string",
+  "nativePlace" : "string",
+  "remark" : "string",
+  "updateBy" : "string",
+  "updateTime" : "string",
+  "userId" : "string",
+  "userName" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 导入用戶列表 {anchor:importuserusingpost}
+{noformat}
+POST /user/importUser
+{noformat}
+
+
+h5. 说明
+导入用戶列表
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*FormData*|*file*\\ \\ _必填_||file||file|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}multipart/form-data{noformat}
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/user/importUser
+{code}
+
+
+h6. 请求 formData
+{code:language=json}
+"file"
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 删除用戶 {anchor:removeuserusingpost}
+{noformat}
+POST /user/removeUser
+{noformat}
+
+
+h5. 说明
+删除用戶
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Query*|*ids*\\ \\ _可选_||用户ids||string|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/user/removeUser
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 修改保存用戶 {anchor:updateuserusingpost}
+{noformat}
+POST /user/updateUser
+{noformat}
+
+
+h5. 说明
+修改保存用戶
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Body*|*user*\\ \\ _必填_||user||[User|#user]|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*201*||Created||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 消耗
+
+* {noformat}application/json{noformat}
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/user/updateUser
+{code}
+
+
+h6. 请求 body
+{code:language=json}
+{
+  "age" : 0,
+  "birthDate" : "string",
+  "cellStyleMap" : {
+    "string" : "[#cellstyle]"
+  },
+  "createBy" : "string",
+  "createTime" : "string",
+  "idNumber" : "string",
+  "nativePlace" : "string",
+  "remark" : "string",
+  "updateBy" : "string",
+  "updateTime" : "string",
+  "userId" : "string",
+  "userName" : "string"
+}
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 查询用戶详情 {anchor:userdetailusingget}
+{noformat}
+GET /user/userDetail
+{noformat}
+
+
+h5. 说明
+查询用戶详情
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Query*|*id*\\ \\ _可选_||用户id||string|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||< string, object > map|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/user/userDetail
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+"object"
+{code}
+
+
+h4. 导出用戶列表 {anchor:userexportusingget}
+{noformat}
+GET /user/userExport
+{noformat}
+
+
+h5. 说明
+导出用戶列表
+
+
+h5. 参数
+
+||类型||名称||说明||类型||
+|*Query*|*age*\\ \\ _可选_||年龄||integer (int64)|
+|*Query*|*birthDate*\\ \\ _可选_||出生日期||string|
+|*Query*|*createBy*\\ \\ _可选_||创建人||string|
+|*Query*|*createTime*\\ \\ _可选_||创建时间||string (date-time)|
+|*Query*|*idNumber*\\ \\ _可选_||身份证号||string|
+|*Query*|*nativePlace*\\ \\ _可选_||籍贯||string|
+|*Query*|*remark*\\ \\ _可选_||备注||string|
+|*Query*|*updateBy*\\ \\ _可选_||更新人||string|
+|*Query*|*updateTime*\\ \\ _可选_||更新时间||string (date-time)|
+|*Query*|*userId*\\ \\ _可选_||主键||string|
+|*Query*|*userName*\\ \\ _可选_||姓名||string|
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||无内容|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/user/userExport
+{code}
+
+
+h4. 查询用戶列表 {anchor:userlistusingget}
+{noformat}
+GET /user/userList
+{noformat}
+
+
+h5. 说明
+查询用戶列表
+
+
+h5. 参数
+
+||类型||名称||说明||类型||默认值||
+|*Query*|*age*\\ \\ _可选_||年龄||integer (int64)|| |
+|*Query*|*birthDate*\\ \\ _可选_||出生日期||string|| |
+|*Query*|*createBy*\\ \\ _可选_||创建人||string|| |
+|*Query*|*createTime*\\ \\ _可选_||创建时间||string (date-time)|| |
+|*Query*|*idNumber*\\ \\ _可选_||身份证号||string|| |
+|*Query*|*nativePlace*\\ \\ _可选_||籍贯||string|| |
+|*Query*|*pageNum*\\ \\ _可选_||当前页||integer (int32)||{noformat}1{noformat}|
+|*Query*|*pageSize*\\ \\ _可选_||每页条数||integer (int32)||{noformat}10{noformat}|
+|*Query*|*remark*\\ \\ _可选_||备注||string|| |
+|*Query*|*updateBy*\\ \\ _可选_||更新人||string|| |
+|*Query*|*updateTime*\\ \\ _可选_||更新时间||string (date-time)|| |
+|*Query*|*userId*\\ \\ _可选_||主键||string|| |
+|*Query*|*userName*\\ \\ _可选_||姓名||string|| |
+
+
+h5. 响应
+
+||HTTP代码||说明||类型||
+|*200*||OK||[PageInfo«User»|#4994708ea1e995db67c5e36e9a5fb662]|
+|*401*||Unauthorized||无内容|
+|*403*||Forbidden||无内容|
+|*404*||Not Found||无内容|
+
+
+h5. 生成
+
+* {noformat}\*/*{noformat}
+
+
+h5. HTTP请求示例
+
+h6. 请求 path
+{code}
+/user/userList
+{code}
+
+
+h5. HTTP响应示例
+
+h6. 响应 200
+{code:language=json}
+{
+  "endRow" : 0,
+  "firstPage" : 0,
+  "hasNextPage" : true,
+  "hasPreviousPage" : true,
+  "isFirstPage" : true,
+  "isLastPage" : true,
+  "lastPage" : 0,
+  "list" : [ {
+    "age" : 0,
+    "birthDate" : "string",
+    "cellStyleMap" : {
+      "string" : "[#cellstyle]"
+    },
+    "createBy" : "string",
+    "createTime" : "string",
+    "idNumber" : "string",
+    "nativePlace" : "string",
+    "remark" : "string",
+    "updateBy" : "string",
+    "updateTime" : "string",
+    "userId" : "string",
+    "userName" : "string"
+  } ],
+  "navigateFirstPage" : 0,
+  "navigateLastPage" : 0,
+  "navigatePages" : 0,
+  "navigatepageNums" : [ 0 ],
+  "nextPage" : 0,
+  "pageNum" : 0,
+  "pageSize" : 0,
+  "pages" : 0,
+  "prePage" : 0,
+  "size" : 0,
+  "startRow" : 0,
+  "total" : 0
+}
+{code}
+
+
+

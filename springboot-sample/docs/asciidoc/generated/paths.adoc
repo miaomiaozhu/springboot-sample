@@ -1,0 +1,1116 @@
+
+[[_paths]]
+== 资源
+
+[[_role-controller_resource]]
+=== Role-controller
+角色controller
+
+
+[[_addsaveusingpost]]
+==== 新增角色
+....
+POST /sample/role/add
+....
+
+
+===== 说明
+新增角色
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Body**|**role** +
+__必填__|role|<<_role,Role>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/sample/role/add
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "cellStyleMap" : {
+    "string" : "<<_cellstyle>>"
+  },
+  "createBy" : "string",
+  "createTime" : "string",
+  "roleId" : "string",
+  "roleName" : "string",
+  "updateBy" : "string",
+  "updateTime" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_roledetailusingget]]
+==== 查询角色详情
+....
+GET /sample/role/detail
+....
+
+
+===== 说明
+查询角色详情
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Query**|**id** +
+__可选__|id|string
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/sample/role/detail
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_editsaveusingpost]]
+==== 修改角色
+....
+POST /sample/role/edit
+....
+
+
+===== 说明
+修改角色
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Body**|**role** +
+__必填__|role|<<_role,Role>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/sample/role/edit
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "cellStyleMap" : {
+    "string" : "<<_cellstyle>>"
+  },
+  "createBy" : "string",
+  "createTime" : "string",
+  "roleId" : "string",
+  "roleName" : "string",
+  "updateBy" : "string",
+  "updateTime" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_exportusingget]]
+==== 导出角色列表
+....
+GET /sample/role/export
+....
+
+
+===== 说明
+导出角色列表
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Query**|**createBy** +
+__可选__|创建人|string
+|**Query**|**createTime** +
+__可选__|创建时间|string (date-time)
+|**Query**|**roleId** +
+__可选__|角色ID|string
+|**Query**|**roleName** +
+__可选__|角色名称|string
+|**Query**|**updateBy** +
+__可选__|更新人|string
+|**Query**|**updateTime** +
+__可选__|更新时间|string (date-time)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/sample/role/export
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_importroleusingpost]]
+==== 导入角色列表
+....
+POST /sample/role/importRole
+....
+
+
+===== 说明
+导入角色列表
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**FormData**|**file** +
+__必填__|file|file
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `multipart/form-data`
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/sample/role/importRole
+----
+
+
+====== 请求 formData
+[source,json]
+----
+"file"
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_listusingget]]
+==== 查询角色列表
+....
+GET /sample/role/list
+....
+
+
+===== 说明
+查询角色列表
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a,.^2a"]
+|===
+|类型|名称|说明|类型|默认值
+|**Query**|**createBy** +
+__可选__|创建人|string|
+|**Query**|**createTime** +
+__可选__|创建时间|string (date-time)|
+|**Query**|**pageNum** +
+__可选__|当前页|integer (int32)|`1`
+|**Query**|**pageSize** +
+__可选__|每页条数|integer (int32)|`10`
+|**Query**|**roleId** +
+__可选__|角色ID|string|
+|**Query**|**roleName** +
+__可选__|角色名称|string|
+|**Query**|**updateBy** +
+__可选__|更新人|string|
+|**Query**|**updateTime** +
+__可选__|更新时间|string (date-time)|
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_d5eb5331f41efec686d2d1c190c2d225,PageInfo«Role»>>
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/sample/role/list
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "endRow" : 0,
+  "firstPage" : 0,
+  "hasNextPage" : true,
+  "hasPreviousPage" : true,
+  "isFirstPage" : true,
+  "isLastPage" : true,
+  "lastPage" : 0,
+  "list" : [ {
+    "cellStyleMap" : {
+      "string" : "<<_cellstyle>>"
+    },
+    "createBy" : "string",
+    "createTime" : "string",
+    "roleId" : "string",
+    "roleName" : "string",
+    "updateBy" : "string",
+    "updateTime" : "string"
+  } ],
+  "navigateFirstPage" : 0,
+  "navigateLastPage" : 0,
+  "navigatePages" : 0,
+  "navigatepageNums" : [ 0 ],
+  "nextPage" : 0,
+  "pageNum" : 0,
+  "pageSize" : 0,
+  "pages" : 0,
+  "prePage" : 0,
+  "size" : 0,
+  "startRow" : 0,
+  "total" : 0
+}
+----
+
+
+[[_removeusingpost]]
+==== 删除角色
+....
+POST /sample/role/remove
+....
+
+
+===== 说明
+删除角色
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Query**|**ids** +
+__可选__|角色ID|string
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/sample/role/remove
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_roleexportusingget]]
+==== 导出角色列表
+....
+GET /sample/role/roleExport
+....
+
+
+===== 说明
+导出角色列表
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Query**|**createBy** +
+__可选__|创建人|string
+|**Query**|**createTime** +
+__可选__|创建时间|string (date-time)
+|**Query**|**roleId** +
+__可选__|角色ID|string
+|**Query**|**roleName** +
+__可选__|角色名称|string
+|**Query**|**updateBy** +
+__可选__|更新人|string
+|**Query**|**updateTime** +
+__可选__|更新时间|string (date-time)
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|string
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/sample/role/roleExport
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"string"
+----
+
+
+[[_user-controller_resource]]
+=== User-controller
+用户controller
+
+
+[[_adduserusingpost]]
+==== 新增保存用戶
+....
+POST /user/add
+....
+
+
+===== 说明
+导出用戶列表
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Body**|**user** +
+__必填__|user|<<_user,User>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/user/add
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "age" : 0,
+  "birthDate" : "string",
+  "cellStyleMap" : {
+    "string" : "<<_cellstyle>>"
+  },
+  "createBy" : "string",
+  "createTime" : "string",
+  "idNumber" : "string",
+  "nativePlace" : "string",
+  "remark" : "string",
+  "updateBy" : "string",
+  "updateTime" : "string",
+  "userId" : "string",
+  "userName" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_importuserusingpost]]
+==== 导入用戶列表
+....
+POST /user/importUser
+....
+
+
+===== 说明
+导入用戶列表
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**FormData**|**file** +
+__必填__|file|file
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `multipart/form-data`
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/user/importUser
+----
+
+
+====== 请求 formData
+[source,json]
+----
+"file"
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_removeuserusingpost]]
+==== 删除用戶
+....
+POST /user/removeUser
+....
+
+
+===== 说明
+删除用戶
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Query**|**ids** +
+__可选__|用户ids|string
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/user/removeUser
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_updateuserusingpost]]
+==== 修改保存用戶
+....
+POST /user/updateUser
+....
+
+
+===== 说明
+修改保存用戶
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Body**|**user** +
+__必填__|user|<<_user,User>>
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**201**|Created|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 消耗
+
+* `application/json`
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/user/updateUser
+----
+
+
+====== 请求 body
+[source,json]
+----
+{
+  "age" : 0,
+  "birthDate" : "string",
+  "cellStyleMap" : {
+    "string" : "<<_cellstyle>>"
+  },
+  "createBy" : "string",
+  "createTime" : "string",
+  "idNumber" : "string",
+  "nativePlace" : "string",
+  "remark" : "string",
+  "updateBy" : "string",
+  "updateTime" : "string",
+  "userId" : "string",
+  "userName" : "string"
+}
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_userdetailusingget]]
+==== 查询用戶详情
+....
+GET /user/userDetail
+....
+
+
+===== 说明
+查询用戶详情
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Query**|**id** +
+__可选__|用户id|string
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|< string, object > map
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/user/userDetail
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+"object"
+----
+
+
+[[_userexportusingget]]
+==== 导出用戶列表
+....
+GET /user/userExport
+....
+
+
+===== 说明
+导出用戶列表
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a"]
+|===
+|类型|名称|说明|类型
+|**Query**|**age** +
+__可选__|年龄|integer (int64)
+|**Query**|**birthDate** +
+__可选__|出生日期|string
+|**Query**|**createBy** +
+__可选__|创建人|string
+|**Query**|**createTime** +
+__可选__|创建时间|string (date-time)
+|**Query**|**idNumber** +
+__可选__|身份证号|string
+|**Query**|**nativePlace** +
+__可选__|籍贯|string
+|**Query**|**remark** +
+__可选__|备注|string
+|**Query**|**updateBy** +
+__可选__|更新人|string
+|**Query**|**updateTime** +
+__可选__|更新时间|string (date-time)
+|**Query**|**userId** +
+__可选__|主键|string
+|**Query**|**userName** +
+__可选__|姓名|string
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|无内容
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/user/userExport
+----
+
+
+[[_userlistusingget]]
+==== 查询用戶列表
+....
+GET /user/userList
+....
+
+
+===== 说明
+查询用戶列表
+
+
+===== 参数
+
+[options="header", cols=".^2a,.^3a,.^9a,.^4a,.^2a"]
+|===
+|类型|名称|说明|类型|默认值
+|**Query**|**age** +
+__可选__|年龄|integer (int64)|
+|**Query**|**birthDate** +
+__可选__|出生日期|string|
+|**Query**|**createBy** +
+__可选__|创建人|string|
+|**Query**|**createTime** +
+__可选__|创建时间|string (date-time)|
+|**Query**|**idNumber** +
+__可选__|身份证号|string|
+|**Query**|**nativePlace** +
+__可选__|籍贯|string|
+|**Query**|**pageNum** +
+__可选__|当前页|integer (int32)|`1`
+|**Query**|**pageSize** +
+__可选__|每页条数|integer (int32)|`10`
+|**Query**|**remark** +
+__可选__|备注|string|
+|**Query**|**updateBy** +
+__可选__|更新人|string|
+|**Query**|**updateTime** +
+__可选__|更新时间|string (date-time)|
+|**Query**|**userId** +
+__可选__|主键|string|
+|**Query**|**userName** +
+__可选__|姓名|string|
+|===
+
+
+===== 响应
+
+[options="header", cols=".^2a,.^14a,.^4a"]
+|===
+|HTTP代码|说明|类型
+|**200**|OK|<<_4994708ea1e995db67c5e36e9a5fb662,PageInfo«User»>>
+|**401**|Unauthorized|无内容
+|**403**|Forbidden|无内容
+|**404**|Not Found|无内容
+|===
+
+
+===== 生成
+
+* `\*/*`
+
+
+===== HTTP请求示例
+
+====== 请求 path
+----
+/user/userList
+----
+
+
+===== HTTP响应示例
+
+====== 响应 200
+[source,json]
+----
+{
+  "endRow" : 0,
+  "firstPage" : 0,
+  "hasNextPage" : true,
+  "hasPreviousPage" : true,
+  "isFirstPage" : true,
+  "isLastPage" : true,
+  "lastPage" : 0,
+  "list" : [ {
+    "age" : 0,
+    "birthDate" : "string",
+    "cellStyleMap" : {
+      "string" : "<<_cellstyle>>"
+    },
+    "createBy" : "string",
+    "createTime" : "string",
+    "idNumber" : "string",
+    "nativePlace" : "string",
+    "remark" : "string",
+    "updateBy" : "string",
+    "updateTime" : "string",
+    "userId" : "string",
+    "userName" : "string"
+  } ],
+  "navigateFirstPage" : 0,
+  "navigateLastPage" : 0,
+  "navigatePages" : 0,
+  "navigatepageNums" : [ 0 ],
+  "nextPage" : 0,
+  "pageNum" : 0,
+  "pageSize" : 0,
+  "pages" : 0,
+  "prePage" : 0,
+  "size" : 0,
+  "startRow" : 0,
+  "total" : 0
+}
+----
+
+
+
