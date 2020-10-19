@@ -4,7 +4,7 @@ import com.alibaba.excel.ExcelReader;
 import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.metadata.Sheet;
 import com.alibaba.excel.support.ExcelTypeEnum;
-import com.example.sample.easyexcel.ExcelListener;
+import com.example.sample.easyexcel.UserExcelListener;
 import com.example.sample.user.domain.User;
 import com.example.sample.user.service.IUserService;
 import com.github.pagehelper.PageHelper;
@@ -14,7 +14,6 @@ import com.ruoyi.common.core.controller.BaseController;
 import com.ruoyi.common.core.domain.AjaxResult;
 import com.ruoyi.common.enums.BusinessType;
 import com.ruoyi.common.utils.DateUtils;
-import com.ruoyi.common.utils.poi.ExcelUtil;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -27,6 +26,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -119,7 +119,7 @@ public class UserController extends BaseController
     @ResponseBody
     @ApiOperation(value="导入用戶列表",notes = "导入用戶列表")
     public AjaxResult importUser(@RequestParam MultipartFile file) {
-
+        long start_time = System.currentTimeMillis();
         InputStream inputStream = null;
         try {
             inputStream = file.getInputStream();
@@ -127,17 +127,19 @@ public class UserController extends BaseController
             e.printStackTrace();
         }
         //实例化实现了AnalysisEventListener接口的类
-        ExcelListener listener = new ExcelListener();
+        UserExcelListener listener = new UserExcelListener(userService);
         //传入参数
         ExcelReader excelReader = new ExcelReader(inputStream, ExcelTypeEnum.XLSX, null, listener);
         //读取信息
         excelReader.read(new Sheet(1, 1, User.class));
-        //获取数据
-        List<Object> list = listener.getDatas();
-        Object ob = (Object) list;
-        List<User> listUser = (List<User>)ob ;
-        //批量插入
-        userService.batchInsertUser(listUser);
+//        //获取数据
+//        List<User> list = listener.getDatas();
+//        Object ob = (Object) list;
+//        List<User> listUser = (List<User>)ob ;
+//        //批量插入
+//        userService.batchInsertUser(listUser);
+        long end_time = System.currentTimeMillis();
+        System.out.println("cost time by seconds->"+(end_time-start_time)/1000+"s");
         return AjaxResult.success();
     }
     /**

@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * EasyExcel 导入监听
  */
-public class ExcelListener extends AnalysisEventListener {
+public class RoleExcelListener extends AnalysisEventListener {
     //可以通过实例获取该值
     private List<Object> datas = new ArrayList<Object>();
 

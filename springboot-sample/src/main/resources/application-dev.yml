@@ -39,6 +39,12 @@ spring:
       filters: stat,wall,slf4j
       # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
       connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  servlet:
+    multipart:
+      # 设置单个文件大小
+      max-file-size: 50MB
+      # 设置单次请求文件的总大小
+      max-request-size: 50MB
       # 合并多个DruidDataSource的监控数据
       #useGlobalDataSourceStat: true
 

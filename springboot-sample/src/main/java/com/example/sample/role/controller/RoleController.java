@@ -4,13 +4,14 @@ import java.util.List;
 import java.io.InputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+
+import com.example.sample.easyexcel.RoleExcelListener;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -32,7 +33,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import javax.servlet.http.HttpServletResponse;
 import com.ruoyi.common.utils.DateUtils;
-import com.example.sample.easyexcel.ExcelListener;
+
 /**
  * 角色Controller
  * 
@@ -145,7 +146,7 @@ public class RoleController extends BaseController
             e.printStackTrace();
         }
         //实例化实现了AnalysisEventListener接口的类
-        ExcelListener listener = new ExcelListener();
+        RoleExcelListener listener = new RoleExcelListener();
         //传入参数
         ExcelReader excelReader = new ExcelReader(inputStream, ExcelTypeEnum.XLSX, null, listener);
         //读取信息
