@@ -1,7 +1,8 @@
 package com.example.sample.user.service;
 
-import java.util.List;
 import com.example.sample.user.domain.User;
+
+import java.util.List;
 
 /**
  * 用戶Service接口

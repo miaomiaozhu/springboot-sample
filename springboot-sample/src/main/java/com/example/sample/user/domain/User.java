@@ -2,7 +2,6 @@ package com.example.sample.user.domain;
 
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.metadata.BaseRowModel;
-import com.ruoyi.common.annotation.Excel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 

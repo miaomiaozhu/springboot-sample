@@ -1,7 +1,8 @@
 package com.example.sample.role.service;
 
-import java.util.List;
 import com.example.sample.role.domain.Role;
+
+import java.util.List;
 
 /**
  * 角色Service接口

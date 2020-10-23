@@ -1,9 +1,10 @@
 package com.example.sample.role.mapper;
 
-import java.util.List;
+import com.example.sample.role.domain.Role;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
-import com.example.sample.role.domain.Role;
+
+import java.util.List;
 
 /**
  * 角色Mapper接口

@@ -1,10 +1,11 @@
 package com.example.sample.role.domain;
 
-import java.util.Date;
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.metadata.BaseRowModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+
+import java.util.Date;
 
 /**
  * 角色对象 test_role

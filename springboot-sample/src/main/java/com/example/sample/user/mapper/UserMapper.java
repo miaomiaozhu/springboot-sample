@@ -1,9 +1,10 @@
 package com.example.sample.user.mapper;
 
-import java.util.List;
 import com.example.sample.user.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * 用戶Mapper接口
